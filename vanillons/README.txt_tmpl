@@ -41,5 +41,13 @@ Tests are run via:
     sudo nosetests -s --tests={{package}}.tests
 
 
+Making Templates
+================
+
+Go up a dir and run the findandreplace script
+
+    rm -Rf templates/{{package}}
+    python {{package}}/gen_templates/findandreplace.py templates/{{package}}
+
 Extending
 =========
