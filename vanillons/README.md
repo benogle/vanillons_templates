@@ -1,11 +1,11 @@
-{{project}}
+Vanillons
 =========
 
-{{project}} is a pylons app that can be used as the basis of other web
+Vanillons is a pylons app that can be used as the basis of other web
 applications. It will provide as a scaffold for rapidly building apps. I am
 tired of repeating myself! It is effectively glue code between pylons,
 benogle/quaid, and benogle/pylons_common. The goal is to make a runnable
-project here, then generate the templates for benogle/{{package}}_templates.
+project here, then generate the templates for benogle/vanillons_templates.
 
 ### virtualenv
 
@@ -27,9 +27,9 @@ Download + extract/clone. Then run
 
     sudo python setup.py develop
 
-Make a {{package}} DB and a {{package}}_test DB, pick a db user and run in psql:
+Make a vanillons DB and a vanillons_test DB, pick a db user and run in psql:
 
-    GRANT ALL PRIVILEGES ON DATABASE {{package}}_test TO myuser;
+    GRANT ALL PRIVILEGES ON DATABASE vanillons_test TO myuser;
 
 Change the development.ini and test.ini to reflect your db settings users:
     
@@ -41,7 +41,7 @@ Generate the proper tables in your fresh new db by running
 
 Tests are run via:
 
-    sudo nosetests -s --tests={{package}}.tests
+    sudo nosetests -s --tests=vanillons.tests
 
 And the webserver is run via
 
@@ -54,18 +54,18 @@ Making Templates
 ----------------
 
 The entire point of this project it to generate templates for other pylons
-projects. To do so, (assuming you have benogle/{{package}}_templates a dir up)
+projects. To do so, (assuming you have benogle/vanillons_templates a dir up)
 go up a dir and run the findandreplace script
 
-    rm -Rf templates/{{package}}
-    python {{package}}/gen_templates/findandreplace.py templates/{{package}}
+    rm -Rf templates/vanillons
+    python vanillons/gen_templates/findandreplace.py templates/vanillons
 
-Read the readme at benogle/{{package}}_templates to install them if you havent
+Read the readme at benogle/vanillons_templates to install them if you havent
 already.
 
 Try out the new templates
 
-    paster create -t {{package}} MyProj
+    paster create -t vanillons MyProj
 
 Extending
 ---------
